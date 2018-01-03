@@ -1,0 +1,40 @@
+#include <stdlib.h>
+
+using namespace std;
+
+struct TPRVEK {
+        int HOD;
+        TPRVEK *ADR;
+    };
+
+int main()
+{
+    TPRVEK *ZAC, *NOVY, *TISK;
+    int cislo, pocet, i;
+    NOVY=NULL;
+
+    cout << "Zadej pocet cisel: " << endl;
+    cin >> pocet;
+
+    for(i=0;i<=pocet;i++)
+    {
+        cislo=rand()%10;
+        if (cislo%2==0)
+        {
+
+        }
+        else
+        {
+        NOVY = new TPRVEK;
+        NOVY->HOD = cislo;
+        NOVY->ADR=ZAC;
+        ZAC=NOVY;
+        }
+    }
+    while (TISK!=NULL)
+    {
+        cout << TISK->HOD << " ";
+        TISK = TISK->ADR;
+    }
+    return 0;
+}
